@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "ecbdc486-6d5d-4d2a-89cc-609e4a8c21e2",
+		"name": "ProjetoBD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registar Pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "paulo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "paulo@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "admin",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log in",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "maria",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Leilão",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "titulo",
+							"value": "aulas de desenho",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "pacote de 5 aulas de desenho tecnico",
+							"type": "text"
+						},
+						{
+							"key": "vendedor_id",
+							"value": "192837465739",
+							"type": "text"
+						},
+						{
+							"key": "min",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "fim",
+							"value": "2021-05-31 19:05:30",
+							"type": "text"
+						},
+						{
+							"key": "artigo",
+							"value": "aulas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/leilao/auth?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjEyMzEyMzEyMzEyMzEsImV4cCI6MTYyMjQ4NzUwOH0.NTUAUhLqbBU9t6XCE3qL4ymdUHJ0cB9dpv4GxXL21cI",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"leilao",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjEyMzEyMzEyMzEyMzEsImV4cCI6MTYyMjQ4NzUwOH0.NTUAUhLqbBU9t6XCE3qL4ymdUHJ0cB9dpv4GxXL21cI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Leiloes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/leiloes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"leiloes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar Leilão",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/leiloes/5577328060743",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"leiloes",
+						"5577328060743"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Leilão",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/leilao/4200449365640",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"leilao",
+						"4200449365640"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar leilões do user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/leiloes/auth?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjQ3Mzk1NzEzMDczMzMsImV4cCI6MTYyMjQ3MTc1Mn0.8syauJ3fNnEX6JnuC4QiTFbd6f46r346mZ5oonfh2dg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"leiloes",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjQ3Mzk1NzEzMDczMzMsImV4cCI6MTYyMjQ3MTc1Mn0.8syauJ3fNnEX6JnuC4QiTFbd6f46r346mZ5oonfh2dg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Licitar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/licitar/4200449365640/120/auth?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjQ3Mzk1NzEzMDczMzMsImV4cCI6MTYyMjQ3MTc1Mn0.8syauJ3fNnEX6JnuC4QiTFbd6f46r346mZ5oonfh2dg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"licitar",
+						"4200449365640",
+						"120",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjQ3Mzk1NzEzMDczMzMsImV4cCI6MTYyMjQ3MTc1Mn0.8syauJ3fNnEX6JnuC4QiTFbd6f46r346mZ5oonfh2dg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mensagem no mural",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mensagem",
+							"value": "preço do shipping?",
+							"type": "text"
+						},
+						{
+							"key": "titulo",
+							"value": "shipping",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/mural/6428104903649/auth?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjQ3Mzk1NzEzMDczMzMsImV4cCI6MTYyMjQ3MTc1Mn0.8syauJ3fNnEX6JnuC4QiTFbd6f46r346mZ5oonfh2dg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"mural",
+						"6428104903649",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjQ3Mzk1NzEzMDczMzMsImV4cCI6MTYyMjQ3MTc1Mn0.8syauJ3fNnEX6JnuC4QiTFbd6f46r346mZ5oonfh2dg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Caixa de Correio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/correio/auth?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjc3MzM1MTk5MzU3NzUsImV4cCI6MTYyMjQ3MjMzM30.FR-TlyPIPO7ezR4HkjWzItcCEOdx04LX8lJ_K5otjNg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"correio",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjc3MzM1MTk5MzU3NzUsImV4cCI6MTYyMjQ3MjMzM30.FR-TlyPIPO7ezR4HkjWzItcCEOdx04LX8lJ_K5otjNg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancelar Leilão",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/cancelaLeilao/4233163921307/auth?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjcyNTY0MDMyNzE4MzcsImV4cCI6MTYyMjM5ODQxM30.IJs9cxqn8jwMHRf3UqAeqcwaV5q32dTYXoE4weiKAGs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"cancelaLeilao",
+						"4233163921307",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjcyNTY0MDMyNzE4MzcsImV4cCI6MTYyMjM5ODQxM30.IJs9cxqn8jwMHRf3UqAeqcwaV5q32dTYXoE4weiKAGs"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Banir User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_ID",
+							"value": "7256403271837",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/banirUser/auth?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjE5ODIxODk2MTgzMTUsImV4cCI6MTYyMjQwNDYwOX0.v6py8g1OE7qQINSONgTDYIt29rtFivtdLdWyZPKnK-w",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"banirUser",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjE5ODIxODk2MTgzMTUsImV4cCI6MTYyMjQwNDYwOX0.v6py8g1OE7qQINSONgTDYIt29rtFivtdLdWyZPKnK-w"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exibir estatísticas (admin)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/atividade/auth?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjE5ODIxODk2MTgzMTUsImV4cCI6MTYyMjQ2ODg4NX0.SurQSet3zzQ_8fjZnDgULon_-VSfqQcs3K_JvwEdtDo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"atividade",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySUQiOjE5ODIxODk2MTgzMTUsImV4cCI6MTYyMjQ2ODg4NX0.SurQSet3zzQ_8fjZnDgULon_-VSfqQcs3K_JvwEdtDo"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
